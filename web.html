@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My All Link</title>
+  <link rel="icon" type="image/png" href="https://media.licdn.com/dms/image/v2/D5603AQGbJdSMvCI7ig/profile-displayphoto-shrink_400_400/B56ZabViQ2HsAg-/0/1746362837771?e=1761177600&v=beta&t=SaSldACF5EUrN150IR3aNzbt57khmm1rYZQNT7JRv-o">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(-45deg, #000, #ffc800, #111, #4a3c01);
+      background-size: 400% 400%;
+      animation: gradientBG 8s ease infinite;
+      color: #060606;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .bg-blur {
+      position: absolute;
+      left: -100px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 400px;
+      height: 400px;
+      background: url('https://media.licdn.com/dms/image/v2/D5603AQGbJdSMvCI7ig/profile-displayphoto-shrink_400_400/B56ZabViQ2HsAg-/0/1746362837771?e=1761177600&v=beta&t=SaSldACF5EUrN150IR3aNzbt57khmm1rYZQNT7JRv-o') no-repeat center/cover;
+      filter: blur(12px) opacity(0.5);
+      border-radius: 50%;
+      z-index: 0;
+      animation: float 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes float {
+      from { transform: translateY(-50%) translateX(0); }
+      to { transform: translateY(-50%) translateX(30px); }
+    }
+
+    .container {
+      width: 90%;
+      max-width: 500px;
+      background: rgba(0, 0, 0, 0.75);
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+      z-index: 1;
+      position: relative;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      margin-bottom: 2px;
+      border: 3px solid #ffcc00;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #ffcc00;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 15px;
+      margin-bottom: 25px;
+      color: #eee;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .link-btn {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: #000;
+      background: linear-gradient(90deg, #fcca02, #ffe481);
+      padding: 12px;
+      border-radius: 50px;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .link-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    }
+
+    .bounce-out {
+      animation: bounceOut 0.7s forwards;
+    }
+
+    @keyframes bounceOut {
+      20% { transform: scale(1.1); }
+      50% { transform: scale(0.9); }
+      80% { transform: scale(1.05); }
+      100% { transform: scale(0) translateY(50px); opacity: 0; }
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 13px;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-blur"></div>
+
+  <div class="container">
+    <img src="https://media.licdn.com/dms/image/v2/D5603AQGbJdSMvCI7ig/profile-displayphoto-shrink_400_400/B56ZabViQ2HsAg-/0/1746362837771?e=1761177600&v=beta&t=SaSldACF5EUrN150IR3aNzbt57khmm1rYZQNT7JRv-o" alt="Profile Logo" class="logo">
+    <h1>Rohit Kumar</h1>
+    
+    <p>CSE - AI & ML Student<br>at <b>Lovely Profession University</b> <br> <br> All my important links in one place</p>
+
+    <div class="links">
+      
+      <a href="https://www.linkedin.com/in/rohit-kumar-22577135a/" class="link-btn" target="_blank"> <i class="fab fa-linkedin"></i>  LinkedIn</a>
+      <a href="https://github.com/Engineer-Rohit" class="link-btn" target="_blank"> GitHub</a>
+      <a href="https://www.instagram.com/officialbyrohit/" class="link-btn" target="_blank"> Instagram(Official)</a>
+      <a href="mailto:officialbyrohitkumar" class="link-btn">  Contact Me</a>
+      <a href="https://www.instagram.com/artgallerybyrohit?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="link-btn" target="_blank"> Instagram(Personal)</a>
+    </div>
+
+    <footer>© 2025 Rohit Kumar</footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('.link-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        let el = this;
+        el.classList.add('bounce-out');
+        setTimeout(() => {
+          window.open(el.getAttribute('href'), '_blank');
+          el.style.display = 'none';
+        }, 700);
+      });
+    });
+  </script>
+</body>
+</html>
